@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SARP OS</title>
+    <link rel="icon" type="image/x-icon" href="../static/icons/cursor.ico" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='style.css' />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body dir="ltr" style="overflow: hidden;" id="body">
+    <div id="ultimate-adv-loading-screen">
+        <div id="bg-swirl"></div>
+        <div id="scanlines"></div>
+        <div id="spinner"></div>
+        <div id="typed-line1">INITIALIZING CORE MODULES...</div>
+        <div id="typed-line2">CONFIGURING SYSTEM PROCESSES...</div>
+        <div id="typed-line3">FINALIZING ENVIRONMENT SETTINGS...</div>
+        <div id="welcome-text">WELCOME TO SARP OS</div>
+      </div>
+      
+      <div id="main-page-content" style="display: none;">
+        <aside>
+            <div class='apps' id="about-me_app"><img src='../static/imgs/icons/about-me.webp'>
+                <p>About me</p>
+            </div>
+            <div class='apps' id="experience_app"><img src='../static/imgs/icons/experience.webp'>
+                <p style="text-align: center;">Experience</p>
+            </div>
+            <div class='apps' id="contact_app"><img src='../static/imgs/icons/contact.webp'>
+                <p>Contact</p>
+            </div>
+            <div class='apps' id="resume_app"><img src='../static/imgs/icons/resume.webp'>
+                <p>Resume</p>
+            </div>
+            <div class='apps' id="credits_app"><img src='../static/imgs/icons/credits.webp'>
+                <p>Credits</p>
+            </div>
+        </aside>
+        <footer style="z-index:9999999" id="footer">
+            <section id="windows-icon-section" class="taskbar-hover windows-hover">
+                <svg id="windows-icon" viewBox="0 0 150 150" width="24px" height="24px"
+                    style="width: 1.5rem; height: auto; ">
+    
+                    <path color="#ffffff" fill="#ffffff"
+                        d="M 59.554688 23.28125 L 14.554688 30.03125 C 13.085938 30.253906 12 31.515625 12 33 L 12 69 C 12 70.660156 13.34375 72 15 72 L 60 72 C 61.65625 72 63 70.660156 63 69 L 63 26.25 C 63 25.378906 62.617188 24.550781 61.957031 23.976562 C 61.296875 23.410156 60.417969 23.164062 59.554688 23.28125 Z M 136.957031 12.726562 C 136.296875 12.160156 135.421875 11.914062 134.554688 12.03125 L 71.554688 21.484375 C 70.085938 21.703125 69 22.964844 69 24.449219 L 69 69 C 69 70.660156 70.34375 72 72 72 L 135 72 C 136.65625 72 138 70.660156 138 69 L 138 15 C 138 14.128906 137.617188 13.300781 136.957031 12.726562 Z M 60 78 L 15 78 C 13.34375 78 12 79.339844 12 81 L 12 117 C 12 118.484375 13.085938 119.746094 14.554688 119.96875 L 59.554688 126.71875 C 59.707031 126.738281 59.851562 126.75 60 126.75 C 60.714844 126.75 61.410156 126.496094 61.957031 126.023438 C 62.617188 125.449219 63 124.621094 63 123.75 L 63 81 C 63 79.339844 61.65625 78 60 78 Z M 135 78 L 72 78 C 70.34375 78 69 79.339844 69 81 L 69 125.550781 C 69 127.035156 70.085938 128.296875 71.554688 128.515625 L 134.554688 137.96875 C 134.703125 137.988281 134.851562 138 135 138 C 135.714844 138 136.410156 137.746094 136.957031 137.273438 C 137.617188 136.699219 138 135.871094 138 135 L 138 81 C 138 79.339844 136.65625 78 135 78 Z M 135 78 " />
+    
+                </svg>
+            </section>
+    
+            <article class="open-windows-menu">
+                <section class="left-panel">
+                    <section class="start left-panel-hover">
+                        <svg viewBox="0 0 150 150" width="24px" height="24px" style="padding-top: 10px;">
+                            <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;"
+                                d="M 8 44 L 88 44 L 88 52 L 8 52 Z M 8 20 L 88 20 L 88 28 L 8 28 Z M 8 68 L 88 68 L 88 76 L 8 76 Z M 8 68 " />
+                        </svg>
+                        <p style="font-size: 1.4em; margin-bottom: 0px;">Start</p>
+                    </section>
+                    <section class="details">
+                        <section class="left-bottom-panel left-panel-hover">
+                            <img src="../static/imgs/about-me/profile.jpeg" alt="profile">
+                            <p style="font-size: 1.4em; margin-bottom: 0px;">Sarp Tan Doven</p>
+                        </section>
+                        <section class="left-bottom-panel left-panel-hover">
+                            <svg width="16" height="16" x="0" y="0" viewBox="0 0 477.867 477.867"
+                                style="enable-background:new 0 0 16 16" xml:space="preserve" class="">
+                                <path
+                                    d="M421.649,90.317L336.316,4.983c-1.589-1.593-3.481-2.852-5.564-3.703c-2.059-0.841-4.261-1.276-6.485-1.28H102.4    C74.123,0,51.2,22.923,51.2,51.2v375.467c0,28.277,22.923,51.2,51.2,51.2h273.067c28.277,0,51.2-22.923,51.2-51.2V102.4    C426.643,97.87,424.841,93.531,421.649,90.317z M341.333,58.266l27.068,27.068h-27.068V58.266z M392.533,426.667    c0,9.426-7.641,17.067-17.067,17.067H102.4c-9.426,0-17.067-7.641-17.067-17.067V51.2c0-9.426,7.641-17.067,17.067-17.067h204.8    V102.4c0,9.426,7.641,17.067,17.067,17.067h68.267V426.667z"
+                                    fill="#ffffff" data-original="#000000" class="" />
+                            </svg>
+                            <p style="font-size: 1.4em; margin-bottom: 0px;">Documents</p>
+                        </section>
+    
+                        <section class="left-bottom-panel left-panel-hover">
+                            <svg width="16" height="16" x="0" y="0" viewBox="0 0 265.257 265.257"
+                                style="enable-background:new 0 0 16 16" xml:space="preserve">
+                                <path
+                                    d="M247.757,27.677H17.5c-9.649,0-17.5,7.851-17.5,17.5V220.08c0,9.65,7.851,17.5,17.5,17.5h230.257   c9.649,0,17.5-7.85,17.5-17.5V45.177C265.257,35.528,257.407,27.677,247.757,27.677z M17.5,42.677h230.257   c1.355,0,2.5,1.145,2.5,2.5v116.474l-40.108-51.474c-2.976-3.819-7.332-6.108-11.952-6.278c-4.619-0.173-9.132,1.791-12.382,5.382   l-52.039,57.512c-1.253,1.384-4.033,1.766-5.614,0.772l-42.788-26.946c-7.332-4.619-18.063-4.143-24.958,1.105L15,176.288V45.177   C15,43.822,16.145,42.677,17.5,42.677z M247.757,222.58H17.5c-1.355,0-2.5-1.145-2.5-2.5v-24.942l54.501-41.478   c1.893-1.44,5.87-1.616,7.881-0.349l42.788,26.946c7.734,4.871,18.596,3.377,24.729-3.4l52.039-57.512   c0.312-0.345,0.535-0.45,0.708-0.457c0.131,0.005,0.385,0.141,0.671,0.508l51.94,66.658v34.025   C250.257,221.435,249.112,222.58,247.757,222.58z"
+                                    fill="#ffffff" data-original="#000002" />
+                                <path
+                                    d="M110.843,129.224c14.649,0,26.566-11.917,26.566-26.566s-11.918-26.566-26.566-26.566   c-14.649,0-26.566,11.918-26.566,26.566S96.194,129.224,110.843,129.224z M110.843,91.091c6.378,0,11.566,5.188,11.566,11.566   c0,6.378-5.188,11.566-11.566,11.566c-6.378,0-11.566-5.188-11.566-11.566C99.277,96.28,104.465,91.091,110.843,91.091z"
+                                    fill="#ffffff" data-original="#000002" />
+                            </svg>
+                            <p style="font-size: 1.4em; margin-bottom: 0px;">Pictures</p>
+                        </section>
+    
+                        <section class="left-bottom-panel left-panel-hover">
+                            <svg width="16" height="16" x="0" y="0" viewBox="0 0 512 512"
+                                style="enable-background:new 0 0 16 16" xml:space="preserve" class="">
+                                <path xmlns="http://www.w3.org/2000/svg"
+                                    d="m272.066 512h-32.133c-25.989 0-47.134-21.144-47.134-47.133v-10.871c-11.049-3.53-21.784-7.986-32.097-13.323l-7.704 7.704c-18.659 18.682-48.548 18.134-66.665-.007l-22.711-22.71c-18.149-18.129-18.671-48.008.006-66.665l7.698-7.698c-5.337-10.313-9.792-21.046-13.323-32.097h-10.87c-25.988 0-47.133-21.144-47.133-47.133v-32.134c0-25.989 21.145-47.133 47.134-47.133h10.87c3.531-11.05 7.986-21.784 13.323-32.097l-7.704-7.703c-18.666-18.646-18.151-48.528.006-66.665l22.713-22.712c18.159-18.184 48.041-18.638 66.664.006l7.697 7.697c10.313-5.336 21.048-9.792 32.097-13.323v-10.87c0-25.989 21.144-47.133 47.134-47.133h32.133c25.989 0 47.133 21.144 47.133 47.133v10.871c11.049 3.53 21.784 7.986 32.097 13.323l7.704-7.704c18.659-18.682 48.548-18.134 66.665.007l22.711 22.71c18.149 18.129 18.671 48.008-.006 66.665l-7.698 7.698c5.337 10.313 9.792 21.046 13.323 32.097h10.87c25.989 0 47.134 21.144 47.134 47.133v32.134c0 25.989-21.145 47.133-47.134 47.133h-10.87c-3.531 11.05-7.986 21.784-13.323 32.097l7.704 7.704c18.666 18.646 18.151 48.528-.006 66.665l-22.713 22.712c-18.159 18.184-48.041 18.638-66.664-.006l-7.697-7.697c-10.313 5.336-21.048 9.792-32.097 13.323v10.871c0 25.987-21.144 47.131-47.134 47.131zm-106.349-102.83c14.327 8.473 29.747 14.874 45.831 19.025 6.624 1.709 11.252 7.683 11.252 14.524v22.148c0 9.447 7.687 17.133 17.134 17.133h32.133c9.447 0 17.134-7.686 17.134-17.133v-22.148c0-6.841 4.628-12.815 11.252-14.524 16.084-4.151 31.504-10.552 45.831-19.025 5.895-3.486 13.4-2.538 18.243 2.305l15.688 15.689c6.764 6.772 17.626 6.615 24.224.007l22.727-22.726c6.582-6.574 6.802-17.438.006-24.225l-15.695-15.695c-4.842-4.842-5.79-12.348-2.305-18.242 8.473-14.326 14.873-29.746 19.024-45.831 1.71-6.624 7.684-11.251 14.524-11.251h22.147c9.447 0 17.134-7.686 17.134-17.133v-32.134c0-9.447-7.687-17.133-17.134-17.133h-22.147c-6.841 0-12.814-4.628-14.524-11.251-4.151-16.085-10.552-31.505-19.024-45.831-3.485-5.894-2.537-13.4 2.305-18.242l15.689-15.689c6.782-6.774 6.605-17.634.006-24.225l-22.725-22.725c-6.587-6.596-17.451-6.789-24.225-.006l-15.694 15.695c-4.842 4.843-12.35 5.791-18.243 2.305-14.327-8.473-29.747-14.874-45.831-19.025-6.624-1.709-11.252-7.683-11.252-14.524v-22.15c0-9.447-7.687-17.133-17.134-17.133h-32.133c-9.447 0-17.134 7.686-17.134 17.133v22.148c0 6.841-4.628 12.815-11.252 14.524-16.084 4.151-31.504 10.552-45.831 19.025-5.896 3.485-13.401 2.537-18.243-2.305l-15.688-15.689c-6.764-6.772-17.627-6.615-24.224-.007l-22.727 22.726c-6.582 6.574-6.802 17.437-.006 24.225l15.695 15.695c4.842 4.842 5.79 12.348 2.305 18.242-8.473 14.326-14.873 29.746-19.024 45.831-1.71 6.624-7.684 11.251-14.524 11.251h-22.148c-9.447.001-17.134 7.687-17.134 17.134v32.134c0 9.447 7.687 17.133 17.134 17.133h22.147c6.841 0 12.814 4.628 14.524 11.251 4.151 16.085 10.552 31.505 19.024 45.831 3.485 5.894 2.537 13.4-2.305 18.242l-15.689 15.689c-6.782 6.774-6.605 17.634-.006 24.225l22.725 22.725c6.587 6.596 17.451 6.789 24.225.006l15.694-15.695c3.568-3.567 10.991-6.594 18.244-2.304z"
+                                    fill="#ffffff" data-original="#000000" class="" />
+                                <path xmlns="http://www.w3.org/2000/svg"
+                                    d="m256 367.4c-61.427 0-111.4-49.974-111.4-111.4s49.973-111.4 111.4-111.4 111.4 49.974 111.4 111.4-49.973 111.4-111.4 111.4zm0-192.8c-44.885 0-81.4 36.516-81.4 81.4s36.516 81.4 81.4 81.4 81.4-36.516 81.4-81.4-36.515-81.4-81.4-81.4z"
+                                    fill="#ffffff" data-original="#000000" class="" />
+                            </svg>
+                            <p style="font-size: 1.4em; margin-bottom: 0px;">Settings</p>
+                        </section>
+    
+                        <section class="left-bottom-panel left-panel-hover">
+                            <svg width="16" height="16" x="0" y="0" viewBox="0 0 512 512"
+                                style="enable-background:new 0 0 16 16" xml:space="preserve" class="">
+                                <path
+                                    d="M336.709,74.843c-10.322-3.944-21.88,1.219-25.825,11.537c-3.945,10.316,1.22,21.879,11.536,25.824    C393.115,139.239,442,207.384,442,286c0,102.561-83.439,186-186,186S70,388.561,70,286c0-78.659,48.908-146.766,119.573-173.793    c10.317-3.946,15.481-15.509,11.536-25.825c-3.947-10.317-15.512-15.48-25.825-11.536C89.185,107.777,30,190.692,30,286    c0,124.922,101.09,226,226,226c124.922,0,226-101.09,226-226C482,190.65,422.778,107.759,336.709,74.843z"
+                                    fill="#ffffff" data-original="#000000" class="" />
+                                <path
+                                    d="M256,0c-11.046,0-20,8.954-20,20v195.851c0,11.046,8.954,20,20,20s20-8.955,20-20V20C276,8.954,267.046,0,256,0z"
+                                    fill="#ffffff" data-original="#000000" class="" />
+                            </svg>
+                            <p style="font-size: 1.4em; margin-bottom: 0px;">Power</p>
+                        </section>
+                    </section>
+                </section>
+    
+                <section class="middle-panel">
+                </section>
+                <section class="right-panel">
+    
+                </section>
+            </article>
+    
+    
+    
+            <section class="pinned-apps">
+                <div class="taskbar-app taskbar-hover" id="about-me_bottom">
+                    <img src="../static/imgs/icons/about-me.webp" alt="About me" />
+                </div>
+                <div class="taskbar-app taskbar-hover" id="experience_bottom">
+                    <img src="../static/imgs/icons/experience.webp" alt="Experience" />
+                </div>
+                <div class="taskbar-app taskbar-hover" id="contact_bottom">
+                    <img src="../static/imgs/icons/contact.webp" alt="Contact" />
+                </div>
+                <div class="taskbar-app taskbar-hover" id="credits_bottom">
+                    <img src="../static/imgs/icons/credits.webp" alt="Credits" />
+                </div>
+            </section>
+    
+    
+            <article class="small-taskbar-info" style="position:fixed; right:0; width: 245px;">
+                <section class="shown-apps">
+                    <span id="expand-other-apps" class="taskbar-hover">
+                        <svg width="16" height="16" x="0" y="0" viewBox="0 0 490.8 490.8"
+                            style="enable-background:new 0 0 16 16" xml:space="preserve" class="">
+                            <path xmlns="http://www.w3.org/2000/svg"
+                                d="M135.685,3.128c-4.237-4.093-10.99-3.975-15.083,0.262c-3.992,4.134-3.992,10.687,0,14.82  l227.115,227.136L120.581,472.461c-4.237,4.093-4.354,10.845-0.262,15.083c4.093,4.237,10.845,4.354,15.083,0.262  c0.089-0.086,0.176-0.173,0.262-0.262l234.667-234.667c4.164-4.165,4.164-10.917,0-15.083L135.685,3.128z"
+                                fill="#ffffff" data-original="#f44336" class="" />
+                            <path xmlns="http://www.w3.org/2000/svg"
+                                d="M128.133,490.68c-5.891,0.011-10.675-4.757-10.686-10.648c-0.005-2.84,1.123-5.565,3.134-7.571l227.136-227.115  L120.581,18.232c-4.171-4.171-4.171-10.933,0-15.104c4.171-4.171,10.933-4.171,15.104,0l234.667,234.667  c4.164,4.165,4.164,10.917,0,15.083L135.685,487.544C133.685,489.551,130.967,490.68,128.133,490.68z"
+                                fill="#ffffff" data-original="#000000" class="" />
+    
+                        </svg>
+                    </span>
+                    <div class="image-container-win taskbar-hover">
+                        <svg class="taskbar-hover" width="16" height="16" x="0" y="0" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 16 16" xml:space="preserve" class="">
+                            <path d="M56.5,126.354V197H0v118h56.5v70.647H512V126.354H56.5z M474.5,348h-380V164h380V348z"
+                                fill="#ffffff" data-original="#000000" />
+                            <rect x="124.5" y="194" width="320" height="124" fill="#ffffff" data-original="#000000" />
+                        </svg>
+                    </div>
+                    <div class="image-container-win taskbar-hover">
+                        <svg width="16" height="16" x="0" y="0" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 16 16" xml:space="preserve" class="">
+                            <path xmlns="http://www.w3.org/2000/svg"
+                                d="m60 512c33.089844 0 61-26.910156 61-60s-27.910156-61-61-61-60 27.910156-60 61 26.910156 60 60 60zm0 0"
+                                fill="#ffffff" data-original="#000000" class="" />
+                            <path xmlns="http://www.w3.org/2000/svg"
+                                d="m15 300h30c91.125 0 167 75.871094 167 167v30c0 8.285156 6.714844 15 15 15h30c8.285156 0 15-6.714844 15-15v-30c0-124.265625-102.734375-227-227-227h-30c-8.285156 0-15 6.714844-15 15v30c0 8.285156 6.714844 15 15 15zm0 0"
+                                fill="#ffffff" data-original="#000000" class="" />
+                            <path xmlns="http://www.w3.org/2000/svg"
+                                d="m15 180h30c157.402344 0 287 129.597656 287 287v30c0 8.285156 6.714844 15 15 15h30c8.285156 0 15-6.714844 15-15v-30c0-190.539062-156.460938-347-347-347h-30c-8.285156 0-15 6.714844-15 15v30c0 8.285156 6.714844 15 15 15zm0 0"
+                                fill="#ffffff" data-original="#000000" class="" />
+                            <path xmlns="http://www.w3.org/2000/svg"
+                                d="m45 0h-30c-8.285156 0-15 6.714844-15 15v30c0 8.285156 6.714844 15 15 15h30c223.675781 0 407 183.324219 407 407v30c0 8.285156 6.714844 15 15 15h30c8.285156 0 15-6.714844 15-15v-30c0-256.8125-210.1875-467-467-467zm0 0"
+                                fill="#ffffff" data-original="#000000" class="" />
+                        </svg>
+                    </div>
+                </section>
+    
+                <section class="date-section taskbar-hover">
+                    <time id="hours-minutes" datetime=""></time>
+                    <time id="current-date" datetime=""></time>
+                </section>
+    
+                <section class="notifications-bar taskbar-hover">
+                    <img src="../static/imgs/icons/notification.webp" alt="" />
+                </section>
+    
+                <section class="show-desktop taskbar-hover">
+                    <hr />
+                </section>
+            </article>
+        </footer>
+    
+        <div id="about-me" class="about-me" style="display: none;">
+            <div class="title-bar" id="titleBar">
+                <div class="title">About me</div>
+                <div class="window-controls">
+                    <div class="window-button restore"></div>
+                    <div class="window-button minimize"></div>
+                    <div class="window-button close"></div>
+                </div>
+            </div>
+            <nav class="navbar bg-black" style="display: flex; justify-content: center;">
+                <div class="container">
+                    <div id="nav-bar" class="row col-9">
+                        <div id="logo-div" class="col mt-2"> About me
+                        </div>
+                        <div class="col mt-1 d-flex align-items-center justify-content-center">
+                            <input id="search-bar" class="form-control" type="search" placeholder="Search">
+                        </div>
+                        <div id="nav-buttons" class="col d-flex align-items-center gap-2">
+                            <img class="ms-2" id="profile" src="../static/imgs/about-me/profile.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+    
+            <div class="content">
+                <div style="margin: 0% 12%;">
+                    <section id="post-side" class="border-bottom p-0 mt-4 bg-black">
+                        <article class="bg-black">
+                            <div id="post-top-bar" class="p-2 d-flex justify-content-between align-items-center">
+                                <div style="display: flex;">
+                                    <div>
+                                        <img id="post-profile-story" src="../static/imgs/about-me/profile.jpeg" alt="">
+                                    </div>
+                                    <div style="display: flex; flex-direction: column;">
+                                        <label class="d-inline ps-2">
+                                            <span id="post-nick">sarptandoven</span>
+                                        </label>
+                                        <label class="d-inline ps-2">
+                                            <span id="show-comments">Hack The North 2024</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg id="dots" aria-label="More options" class="_8-yf5 " color="white" fill="white"
+                                        height="24" role="img" viewBox="0 0 24 24" width="24">
+                                        <circle cx="12" cy="12" r="1.5"></circle>
+                                        <circle cx="6.5" cy="12" r="1.5"></circle>
+                                        <circle cx="17.5" cy="12" r="1.5"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                <img class="post" src="../static/imgs/about-me/childhood.webp" id="post_1" alt="">
+                                <div class="next-photo" id="next_1"></div>
+                                <div class="prev-photo" id="prev_1"></div>
+    
+                            </div>
+                            <div id="bottom-bar">
+                                <div class="mt-3">
+    
+                                    <svg class="buttons" id="like_1" aria-label="Like" color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+                                        </path>
+                                    </svg>
+    
+                                    <svg class="buttons" id="liked_1" aria-label="Like" color="#ffffff" fill="#ffffff"
+                                        width="24" height="24" role="img" viewBox="0 0 48 48"
+                                        style="display: none; margin-left: 1rem;">
+                                        <image id="Capa_1" y="0" width="48" height="48"
+                                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABYCAYAAAADWlKCAAACj0lEQVR4nO2dW3KDMAxFgel+uoXuf1N0ho4pCbYxth5X5J6v/gQknYgY29B5/f6ZFFkbDz1rBtFIa6wJlZi/hI93N6nS5ywE9caa+7xYvBJCRhO7Oqa0HOh4R4RoJFY7z6iYEPEugye1ZORyGCbeux3ikVju/K3fvmjx3uoQ7+SOtMQSLd6NViFIySVqMUWLd6dFCGJyiVxs0eJ94UoIcnKJtfA3KtUYa0IiJJfwGkn1Uoy1JCRSclHJ1rj3PoQokRPC7rDjVGt2CBjvQtgd9rzUnB0CxlEIu8OPvfbsEDCSEHaHP5sDdggYFALGwssVFCs7BAwKAYNCwKAQMCgEDAoBg0LAoBAwKAQMCgGDQsCgEDAoBAwKAYNCwKAQMBaQR5LJHzM7BAwKASMJ4WXLn80BOwSMoxB2iR977dkhYLwLYZfY81JzdggYOSHsEjtOtS51CKXok60xL1lg1ISwS/Qo1vaqQyhFnmpNWy5ZlCLHZS1bf0MoZZymGt75UaeUflTeKDdRShe3atYz7KWUdm7Xqvc+hFKuMX1N7EQpVbprM3qnTilnhmoiMXVCKf8M10JqLotShGogObn4yVLEcpee7f00KbN0zhrT7+JBgqKSo+Z6yJOlqOWmvUD1RCmqOVmsGD5JinouVku4T5BikoPlmnpUKaaDFOtNDtGkmMfrseskihSXOL22AaHfq7jF5r0vC1GKa0wIG+WQpLjHgrJzEUEKxBcDaSupZ0FguhRtb69HYaB+xxA3W1sWCG5QIf3vu6VIhdJ66zbskBv9cQSNwkHfmEZ4PkSygPCzBFEe2JEoZIgpm0hPUI0UNMykZrRH2noKG2qGGXWUVaN1BBZy/SWikERJTNzVyWmafgHRqzxWkCtkGAAAAABJRU5ErkJggg==" />
+                                    </svg>
+    
+    
+                                    <svg class="buttons" aria-label="Comment" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path clip-rule="evenodd"
+                                            d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Share Post" class="_8-yf5 " color="#ffffff"
+                                        fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+                                        </path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Save" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
+                                        </path>
+                                    </svg>
+                                </div>
+    
+                                <div class="d-flex mt-2 ms-2 ps-2">
+                                    <img class="border me-2" id="subtitle-profile" src="../static/imgs/about-me/tina.webp"
+                                        alt="">
+                                    <p>Liked by <span id="weight-600">elon musk</span> and <span id="weight-600">934
+                                            others</span></p>
+                                </div>
+                                <div class="lh-1" style="margin: 0%  2%;">
+                                    <div class="d-flex flex-wrap">
+                                        <h6 class="ms-1">sarptandoven</h6>
+                                        <p style="text-align: justify;  flex-basis: 100%; line-height: 1.5;" class="ms-1">
+                                            🚦 Our Hack the North 2024 project, TraFFIX, reimagines traffic management with AI-driven solutions! Using a convolutional neural network and real-time data, we created a smart system that adjusts traffic signals dynamically to reduce road delays. Check out how we tackled real-world challenges and built a 3D-printed intersection model to bring this idea to life! #HackTheNorth #AI #TrafficSolutions
+                                        </p>
+                                    </div>
+    
+                                    <div>
+                                        <p id="show-comments" class="ms-1">View all 182 comments</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between pe-4">
+                                        <div class="d-flex">
+                                            <h6 class="ms-1">Jensen Huang</h6>
+                                            <p class="ms-1">wow, what an incredibly impactful project!</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p id="time-info" class="ms-1">SEPTEMBER 13TH 2024
+                                        </p>
+                                    </div>
+                                </div>
+                        </article>
+                    </section>
+                    <section id="post-side" class="border-bottom p-0 mt-4 bg-black">
+                        <article class="bg-black">
+                            <div id="post-top-bar" class="p-2 d-flex justify-content-between">
+                                <div style="display: flex;">
+                                    <div>
+                                        <img id="post-profile-story" src="../static/imgs/about-me/profile.jpeg" alt="">
+    
+                                    </div>
+                                    <div style="display: flex; flex-direction: column;">
+                                        <label class="d-inline ps-2">
+                                            <span id="post-nick">sarptandoven</span>
+                                        </label>
+                                        <label class="d-inline ps-2">
+                                            <span id="show-comments">Doven Tech Solutions - My pre-employment venture in computer repair and custom builds.</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg id="dots" aria-label="More options" class="_8-yf5 " color="white" fill="white"
+                                        height="24" role="img" viewBox="0 0 24 24" width="24">
+                                        <circle cx="12" cy="12" r="1.5"></circle>
+                                        <circle cx="6.5" cy="12" r="1.5"></circle>
+                                        <circle cx="17.5" cy="12" r="1.5"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                <img class="post" src="../static/imgs/about-me/childhood_1.webp" id="post_2" alt="">
+                                <div class="next-photo" id="next_2"></div>
+                                <div class="prev-photo" id="prev_2"></div>
+    
+                            </div>
+                            <div id="bottom-bar">
+                                <div class="mt-3"><svg class="buttons" id="like_2" aria-label="Like" color="#ffffff"
+                                        fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+                                        </path>
+                                    </svg>
+    
+                                    <svg class="buttons" id="liked_2" aria-label="Like" color="#ffffff" fill="#ffffff"
+                                        width="24" height="24" role="img" viewBox="0 0 48 48"
+                                        style="display: none; margin-left: 1rem;">
+                                        <image id="Capa_1" y="0" width="48" height="48"
+                                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABYCAYAAAADWlKCAAACj0lEQVR4nO2dW3KDMAxFgel+uoXuf1N0ho4pCbYxth5X5J6v/gQknYgY29B5/f6ZFFkbDz1rBtFIa6wJlZi/hI93N6nS5ywE9caa+7xYvBJCRhO7Oqa0HOh4R4RoJFY7z6iYEPEugye1ZORyGCbeux3ikVju/K3fvmjx3uoQ7+SOtMQSLd6NViFIySVqMUWLd6dFCGJyiVxs0eJ94UoIcnKJtfA3KtUYa0IiJJfwGkn1Uoy1JCRSclHJ1rj3PoQokRPC7rDjVGt2CBjvQtgd9rzUnB0CxlEIu8OPvfbsEDCSEHaHP5sDdggYFALGwssVFCs7BAwKAYNCwKAQMCgEDAoBg0LAoBAwKAQMCgGDQsCgEDAoBAwKAYNCwKAQMBaQR5LJHzM7BAwKASMJ4WXLn80BOwSMoxB2iR977dkhYLwLYZfY81JzdggYOSHsEjtOtS51CKXok60xL1lg1ISwS/Qo1vaqQyhFnmpNWy5ZlCLHZS1bf0MoZZymGt75UaeUflTeKDdRShe3atYz7KWUdm7Xqvc+hFKuMX1N7EQpVbprM3qnTilnhmoiMXVCKf8M10JqLotShGogObn4yVLEcpee7f00KbN0zhrT7+JBgqKSo+Z6yJOlqOWmvUD1RCmqOVmsGD5JinouVku4T5BikoPlmnpUKaaDFOtNDtGkmMfrseskihSXOL22AaHfq7jF5r0vC1GKa0wIG+WQpLjHgrJzEUEKxBcDaSupZ0FguhRtb69HYaB+xxA3W1sWCG5QIf3vu6VIhdJ66zbskBv9cQSNwkHfmEZ4PkSygPCzBFEe2JEoZIgpm0hPUI0UNMykZrRH2noKG2qGGXWUVaN1BBZy/SWikERJTNzVyWmafgHRqzxWkCtkGAAAAABJRU5ErkJggg==" />
+                                    </svg>
+    
+                                    <svg class="buttons" aria-label="Comment" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path clip-rule="evenodd"
+                                            d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Share Post" class="_8-yf5 " color="#ffffff"
+                                        fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+                                        </path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Save" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
+                                        </path>
+                                    </svg>
+                                </div>
+    
+                                <div class="d-flex mt-2 ms-2 ps-2">
+                                    <img class="border me-2" id="subtitle-profile" src="../static/imgs/about-me/sister.jpeg"
+                                        alt="">
+                                    <p>Liked by <span id="weight-600">sister</span> and <span id="weight-600">678
+                                            others</span></p>
+                                </div>
+                                <div class="lh-1" style="margin: 0%  2%;">
+                                    <div class="d-flex flex-wrap">
+                                        <h6 class="ms-1">sarptandoven</h6>
+                                        <p style="text-align: justify;  flex-basis: 100%; line-height: 1.5;" class="ms-1">
+                                            I started this business before I was old enough to be employed, specializing in computer repair and custom PC builds. I provided affordable, high-quality solutions for tech enthusiasts, driven by a passion for technology and entrepreneurship from an early age.🪁
+                                        </p>
+                                    </div>
+    
+                                    <div>
+                                        <p id="show-comments" class="ms-1">View all 14 comments</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between pe-4">
+                                        <div class="d-flex">
+                                            <h6 class="ms-1">Sarp's Neighbor</h6>
+                                            <p class="ms-1">Thanks for fixing our family computer!
+                                            </p>
+                                        </div>
+                                        <img id="comment-like" class="mt-1"
+                                            src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p id="time-info" class="ms-1">AUGUST 13TH 2021</p>
+                                    </div>
+                                </div>
+                        </article>
+                    </section>
+                    <section id="post-side" class="border-bottom p-0 mt-4 bg-black">
+                        <article class="bg-black">
+                            <div id="post-top-bar" class="p-2 d-flex justify-content-between align-items-center">
+                                <div style="display: flex;">
+                                    <div>
+                                        <img id="post-profile-story" src="../static/imgs/about-me/profile.jpeg" alt="">
+                                    </div>
+                                    <div style="display: flex; flex-direction: column;">
+                                        <label class="d-inline ps-2">
+                                            <span id="post-nick">sarptandoven</span>
+                                        </label>
+                                        <label class="d-inline ps-2">
+                                            <span id="show-comments">Chapter Director</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg id="dots" aria-label="More options" class="_8-yf5 " color="white" fill="white"
+                                        height="24" role="img" viewBox="0 0 24 24" width="24">
+                                        <circle cx="12" cy="12" r="1.5"></circle>
+                                        <circle cx="6.5" cy="12" r="1.5"></circle>
+                                        <circle cx="17.5" cy="12" r="1.5"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                <img class="post" src="../static/imgs/about-me/nintendo-ds.webp" id="post_3" alt="">
+                                <div class="next-photo" id="next_3"></div>
+                                <div class="prev-photo" id="prev_3"></div>
+    
+                            </div>
+                            <div id="bottom-bar">
+                                <div class="mt-3">
+                                    <svg class="buttons" id="like_3" aria-label="Like" color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+                                        </path>
+                                    </svg>
+    
+                                    <svg class="buttons" id="liked_3" aria-label="Like" color="#ffffff" fill="#ffffff"
+                                        width="24" height="24" role="img" viewBox="0 0 48 48"
+                                        style="display: none; margin-left: 1rem;">
+                                        <image id="Capa_1" y="0" width="48" height="48"
+                                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABYCAYAAAADWlKCAAACj0lEQVR4nO2dW3KDMAxFgel+uoXuf1N0ho4pCbYxth5X5J6v/gQknYgY29B5/f6ZFFkbDz1rBtFIa6wJlZi/hI93N6nS5ywE9caa+7xYvBJCRhO7Oqa0HOh4R4RoJFY7z6iYEPEugye1ZORyGCbeux3ikVju/K3fvmjx3uoQ7+SOtMQSLd6NViFIySVqMUWLd6dFCGJyiVxs0eJ94UoIcnKJtfA3KtUYa0IiJJfwGkn1Uoy1JCRSclHJ1rj3PoQokRPC7rDjVGt2CBjvQtgd9rzUnB0CxlEIu8OPvfbsEDCSEHaHP5sDdggYFALGwssVFCs7BAwKAYNCwKAQMCgEDAoBg0LAoBAwKAQMCgGDQsCgEDAoBAwKAYNCwKAQMBaQR5LJHzM7BAwKASMJ4WXLn80BOwSMoxB2iR977dkhYLwLYZfY81JzdggYOSHsEjtOtS51CKXok60xL1lg1ISwS/Qo1vaqQyhFnmpNWy5ZlCLHZS1bf0MoZZymGt75UaeUflTeKDdRShe3atYz7KWUdm7Xqvc+hFKuMX1N7EQpVbprM3qnTilnhmoiMXVCKf8M10JqLotShGogObn4yVLEcpee7f00KbN0zhrT7+JBgqKSo+Z6yJOlqOWmvUD1RCmqOVmsGD5JinouVku4T5BikoPlmnpUKaaDFOtNDtGkmMfrseskihSXOL22AaHfq7jF5r0vC1GKa0wIG+WQpLjHgrJzEUEKxBcDaSupZ0FguhRtb69HYaB+xxA3W1sWCG5QIf3vu6VIhdJ66zbskBv9cQSNwkHfmEZ4PkSygPCzBFEe2JEoZIgpm0hPUI0UNMykZrRH2noKG2qGGXWUVaN1BBZy/SWikERJTNzVyWmafgHRqzxWkCtkGAAAAABJRU5ErkJggg==" />
+                                    </svg>
+    
+                                    <svg class="buttons" aria-label="Comment" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path clip-rule="evenodd"
+                                            d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Share Post" class="_8-yf5 " color="#ffffff"
+                                        fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+                                        </path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Save" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
+                                        </path>
+                                    </svg>
+                                </div>
+    
+                                <div class="d-flex mt-2 ms-2 ps-2">
+                                    <img class="border me-2" id="subtitle-profile" src="../static/imgs/about-me/tina_2.jpeg"
+                                        alt="">
+                                    <p>Liked by <span id="weight-600">DECA</span> and <span id="weight-600">456
+                                            others</span></p>
+                                </div>
+                                <div class="lh-1" style="margin: 0%  2%;">
+                                    <div class="d-flex flex-wrap">
+                                        <h6 class="ms-1">sarptandoven</h6>
+                                        <p style="text-align: justify;  flex-basis: 100%; line-height: 1.5;" class="ms-1">
+    
+    
+                                            In Grade 11 and 12, I served as a Director for DECA, organizing workshops, leading competition prep, and helping students excel in business skills. Under my leadership, our chapter achieved record participation, with several members advancing to provincial and international competitions.
+    
+    
+                                            <br><br>
+                                            During those years I spent a lot of time in front of student crowds, whether it was instructing a class, or evaluating public speaking skills.
+                                            <br><br>
+                                            This success opened the door to other leadership roles, as I was entrusted with bringing innovative business opportunities to my high school, further solidifying my passion for entrepreneurship and mentorship.
+                                    </div>
+    
+                                    <div>
+                                        <p id="show-comments" class="ms-1">View all 145 comments</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between pe-4">
+                                        <div class="d-flex">
+                                            <h6 class="ms-1">dad</h6>
+                                            <p class="ms-1">are you winning, son?</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p id="time-info" class="ms-1">MAY 23RD 2024</p>
+                                    </div>
+                                </div>
+    
+    
+                        </article>
+                    </section>
+                    <section id="post-side" class="border-bottom p-0 mt-4 bg-black">
+                        <article class="bg-black">
+                            <div id="post-top-bar" class="p-2 d-flex justify-content-between align-items-center">
+                                <div style="display: flex;">
+                                    <div>
+                                        <img id="post-profile-story" src="../static/imgs/about-me/profile.jpeg" alt="">
+                                    </div>
+                                    <div style="display: flex; flex-direction: column;">
+                                        <label class="d-inline ps-2">
+                                            <span id="post-nick">sarptandoven</span>
+                                        </label>
+                                        <label class="d-inline ps-2">
+                                            <span id="show-comments">Code Ninjas Milton</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg id="dots" aria-label="More options" class="_8-yf5 " color="white" fill="white"
+                                        height="24" role="img" viewBox="0 0 24 24" width="24">
+                                        <circle cx="12" cy="12" r="1.5"></circle>
+                                        <circle cx="6.5" cy="12" r="1.5"></circle>
+                                        <circle cx="17.5" cy="12" r="1.5"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                <img class="post" src="../static/imgs/about-me/uni.webp" id="post_4" alt="">
+                                <div class="next-photo" id="next_4"></div>
+                                <div class="prev-photo" id="prev_4"></div>
+    
+                            </div>
+                            <div id="bottom-bar">
+                                <div class="mt-3">
+                                    <svg class="buttons" id="like_4" aria-label="Like" color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+                                        </path>
+                                    </svg>
+    
+                                    <svg class="buttons" id="liked_4" aria-label="Like" color="#ffffff" fill="#ffffff"
+                                        width="24" height="24" role="img" viewBox="0 0 48 48"
+                                        style="display: none; margin-left: 1rem;">
+                                        <image id="Capa_1" y="0" width="48" height="48"
+                                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABYCAYAAAADWlKCAAACj0lEQVR4nO2dW3KDMAxFgel+uoXuf1N0ho4pCbYxth5X5J6v/gQknYgY29B5/f6ZFFkbDz1rBtFIa6wJlZi/hI93N6nS5ywE9caa+7xYvBJCRhO7Oqa0HOh4R4RoJFY7z6iYEPEugye1ZORyGCbeux3ikVju/K3fvmjx3uoQ7+SOtMQSLd6NViFIySVqMUWLd6dFCGJyiVxs0eJ94UoIcnKJtfA3KtUYa0IiJJfwGkn1Uoy1JCRSclHJ1rj3PoQokRPC7rDjVGt2CBjvQtgd9rzUnB0CxlEIu8OPvfbsEDCSEHaHP5sDdggYFALGwssVFCs7BAwKAYNCwKAQMCgEDAoBg0LAoBAwKAQMCgGDQsCgEDAoBAwKAYNCwKAQMBaQR5LJHzM7BAwKASMJ4WXLn80BOwSMoxB2iR977dkhYLwLYZfY81JzdggYOSHsEjtOtS51CKXok60xL1lg1ISwS/Qo1vaqQyhFnmpNWy5ZlCLHZS1bf0MoZZymGt75UaeUflTeKDdRShe3atYz7KWUdm7Xqvc+hFKuMX1N7EQpVbprM3qnTilnhmoiMXVCKf8M10JqLotShGogObn4yVLEcpee7f00KbN0zhrT7+JBgqKSo+Z6yJOlqOWmvUD1RCmqOVmsGD5JinouVku4T5BikoPlmnpUKaaDFOtNDtGkmMfrseskihSXOL22AaHfq7jF5r0vC1GKa0wIG+WQpLjHgrJzEUEKxBcDaSupZ0FguhRtb69HYaB+xxA3W1sWCG5QIf3vu6VIhdJ66zbskBv9cQSNwkHfmEZ4PkSygPCzBFEe2JEoZIgpm0hPUI0UNMykZrRH2noKG2qGGXWUVaN1BBZy/SWikERJTNzVyWmafgHRqzxWkCtkGAAAAABJRU5ErkJggg==" />
+                                    </svg>
+    
+                                    <svg class="buttons" aria-label="Comment" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path clip-rule="evenodd"
+                                            d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Share Post" class="_8-yf5 " color="#ffffff"
+                                        fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+                                        </path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Save" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
+                                        </path>
+                                    </svg>
+                                </div>
+    
+                                <div class="d-flex mt-2 ms-2 ps-2">
+                                    <img class="border me-2" id="subtitle-profile"
+                                        src="../static/imgs/about-me/logo-upc.webp" style="background-color: white;" alt="">
+                                    <p>Liked by <span id="weight-600">Code Ninjas</span> and <span id="weight-600">234
+                                            others</span></p>
+                                </div>
+                                <div class="lh-1" style="margin: 0%  2%;">
+                                    <div class="d-flex flex-wrap">
+                                        <h6 class="ms-1">sarptandoven</h6>
+                                        <p style="text-align: justify;  flex-basis: 100%; line-height: 1.5;" class="ms-1">
+    
+                                            During my time as a Coding and Engineering Design Instructor at Code Ninjas, I taught programming concepts, game development, and engineering design to students aged 7-14. 
+                                            <br><br>
+                                            I created engaging lesson plans, guided hands-on projects, and fostered a passion for technology among young learners.
+                                            <br><br>
+                                            This position really improved my communication skills and deepened my ability to simplify complex concepts, which built the foundation for my future in teaching and software development.
+                                        </p>
+                                    </div>
+    
+                                    <div>
+                                        <p id="show-comments" class="ms-1">View all 334 comments</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between pe-4">
+                                        <div class="d-flex">
+                                            <h6 class="ms-1">Code Ninjas Milton</h6>
+                                            <p class="ms-1">Congratulations Sarp!</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p id="time-info" class="ms-1">JUNE 1ST 2024</p>
+                                    </div>
+                                </div>
+                        </article>
+                    </section>
+                    <section id="post-side" class="border-bottom p-0 mt-4 bg-black">
+                        <article class="bg-black">
+                            <div id="post-top-bar" class="p-2 d-flex justify-content-between align-items-center">
+                                <div style="display: flex;">
+                                    <div>
+                                        <img id="post-profile-story" src="../static/imgs/about-me/profile.jpeg" alt="">
+                                    </div>
+                                    <div style="display: flex; flex-direction: column;">
+                                        <label class="d-inline ps-2">
+                                            <span id="post-nick">sarptandoven</span>
+                                        </label>
+                                        <label class="d-inline ps-2">
+                                            <span id="show-comments">A young aviation enthusiast!</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg id="dots" aria-label="More options" class="_8-yf5 " color="white" fill="white"
+                                        height="24" role="img" viewBox="0 0 24 24" width="24">
+                                        <circle cx="12" cy="12" r="1.5"></circle>
+                                        <circle cx="6.5" cy="12" r="1.5"></circle>
+                                        <circle cx="17.5" cy="12" r="1.5"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                <img class="post" src="../static/imgs/about-me/travel.webp" id="post_5" alt="">
+                                <div class="next-photo" id="next_5"></div>
+                                <div class="prev-photo" id="prev_5"></div>
+    
+                            </div>
+                            <div id="bottom-bar">
+                                <div class="mt-3">
+                                    <svg class="buttons" id="like_5" aria-label="Like" color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+                                        </path>
+                                    </svg>
+    
+                                    <svg class="buttons" id="liked_5" aria-label="Like" color="#ffffff" fill="#ffffff"
+                                        width="24" height="24" role="img" viewBox="0 0 48 48"
+                                        style="display: none; margin-left: 1rem;">
+                                        <image id="Capa_1" y="0" width="48" height="48"
+                                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABYCAYAAAADWlKCAAACj0lEQVR4nO2dW3KDMAxFgel+uoXuf1N0ho4pCbYxth5X5J6v/gQknYgY29B5/f6ZFFkbDz1rBtFIa6wJlZi/hI93N6nS5ywE9caa+7xYvBJCRhO7Oqa0HOh4R4RoJFY7z6iYEPEugye1ZORyGCbeux3ikVju/K3fvmjx3uoQ7+SOtMQSLd6NViFIySVqMUWLd6dFCGJyiVxs0eJ94UoIcnKJtfA3KtUYa0IiJJfwGkn1Uoy1JCRSclHJ1rj3PoQokRPC7rDjVGt2CBjvQtgd9rzUnB0CxlEIu8OPvfbsEDCSEHaHP5sDdggYFALGwssVFCs7BAwKAYNCwKAQMCgEDAoBg0LAoBAwKAQMCgGDQsCgEDAoBAwKAYNCwKAQMBaQR5LJHzM7BAwKASMJ4WXLn80BOwSMoxB2iR977dkhYLwLYZfY81JzdggYOSHsEjtOtS51CKXok60xL1lg1ISwS/Qo1vaqQyhFnmpNWy5ZlCLHZS1bf0MoZZymGt75UaeUflTeKDdRShe3atYz7KWUdm7Xqvc+hFKuMX1N7EQpVbprM3qnTilnhmoiMXVCKf8M10JqLotShGogObn4yVLEcpee7f00KbN0zhrT7+JBgqKSo+Z6yJOlqOWmvUD1RCmqOVmsGD5JinouVku4T5BikoPlmnpUKaaDFOtNDtGkmMfrseskihSXOL22AaHfq7jF5r0vC1GKa0wIG+WQpLjHgrJzEUEKxBcDaSupZ0FguhRtb69HYaB+xxA3W1sWCG5QIf3vu6VIhdJ66zbskBv9cQSNwkHfmEZ4PkSygPCzBFEe2JEoZIgpm0hPUI0UNMykZrRH2noKG2qGGXWUVaN1BBZy/SWikERJTNzVyWmafgHRqzxWkCtkGAAAAABJRU5ErkJggg==" />
+                                    </svg>
+    
+                                    <svg class="buttons" aria-label="Comment" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path clip-rule="evenodd"
+                                            d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Share Post" class="_8-yf5 " color="#ffffff"
+                                        fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+                                        </path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Save" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
+                                        </path>
+                                    </svg>
+                                </div>
+    
+                                <div class="d-flex mt-2 ms-2 ps-2">
+                                    <img class="border me-2" id="subtitle-profile"
+                                        src="../static/imgs/about-me/friend1.webp" alt="">
+                                    <p>Liked by <span id="weight-600">friend</span> and <span id="weight-600">775
+                                            others</span></p>
+                                </div>
+                                <div class="lh-1" style="margin: 0%  2%;">
+                                    <div class="d-flex flex-wrap">
+                                        <h6 class="ms-1">sarptandoven</h6>
+                                        <p style="text-align: justify;  flex-basis: 100%; line-height: 1.5;" class="ms-1">
+    
+                                            I have always been interested in the field of aviation, and I've had the opportunity to flight a Cessna 172 SkyHawk and Cessna 152.
+                                            <br><br>
+                                            Beyond this, I've even been able to explore and learn about startup projects such as Ribbit, who are building early models of the first fully autonomous aircraft.
+                                            <br><br>
+                                            https://www.flyribbit.com/
+                                        </p>
+                                    </div>
+    
+                                    <div>
+                                        <p id="show-comments" class="ms-1">View all 8 comments</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between pe-4">
+                                        <div class="d-flex">
+                                            <h6 class="ms-1">FlyRibbit</h6>
+                                            <p class="ms-1">Wow! Why don't you come and intern with us?!</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p id="time-info" class="ms-1">MAY 13TH 2022</p>
+                                    </div>
+                                </div>
+                        </article>
+                    </section>
+                    <section id="post-side" class="border-bottom p-0 mt-4 bg-black">
+                        <article class="bg-black">
+                            <div id="post-top-bar" class="p-2 d-flex justify-content-between align-items-center">
+                                <div style="display: flex;">
+                                    <div>
+                                        <img id="post-profile-story" src="../static/imgs/about-me/profile.jpeg" alt="">
+                                    </div>
+                                    <div style="display: flex; flex-direction: column;">
+                                        <label class="d-inline ps-2">
+                                            <span id="post-nick">sarptandoven</span>
+                                        </label>
+                                        <label class="d-inline ps-2">
+                                            <span id="show-comments">Waterloo Engineering</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg id="dots" aria-label="More options" class="_8-yf5 " color="white" fill="white"
+                                        height="24" role="img" viewBox="0 0 24 24" width="24">
+                                        <circle cx="12" cy="12" r="1.5"></circle>
+                                        <circle cx="6.5" cy="12" r="1.5"></circle>
+                                        <circle cx="17.5" cy="12" r="1.5"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                <img class="post" src="../static/imgs/about-me/starduster.webp" id="post_6" alt="">
+                                <div class="next-photo" id="next_6"></div>
+                                <div class="prev-photo" id="prev_6"></div>
+    
+                            </div>
+                            <div id="bottom-bar">
+                                <div class="mt-3"><svg class="buttons" id="like_6" aria-label="Like" color="#ffffff"
+                                        fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+                                        </path>
+                                    </svg>
+    
+                                    <svg class="buttons" id="liked_6" aria-label="Like" color="#ffffff" fill="#ffffff"
+                                        width="24" height="24" role="img" viewBox="0 0 48 48"
+                                        style="display: none; margin-left: 1rem;">
+                                        <image id="Capa_1" y="0" width="48" height="48"
+                                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABYCAYAAAADWlKCAAACj0lEQVR4nO2dW3KDMAxFgel+uoXuf1N0ho4pCbYxth5X5J6v/gQknYgY29B5/f6ZFFkbDz1rBtFIa6wJlZi/hI93N6nS5ywE9caa+7xYvBJCRhO7Oqa0HOh4R4RoJFY7z6iYEPEugye1ZORyGCbeux3ikVju/K3fvmjx3uoQ7+SOtMQSLd6NViFIySVqMUWLd6dFCGJyiVxs0eJ94UoIcnKJtfA3KtUYa0IiJJfwGkn1Uoy1JCRSclHJ1rj3PoQokRPC7rDjVGt2CBjvQtgd9rzUnB0CxlEIu8OPvfbsEDCSEHaHP5sDdggYFALGwssVFCs7BAwKAYNCwKAQMCgEDAoBg0LAoBAwKAQMCgGDQsCgEDAoBAwKAYNCwKAQMBaQR5LJHzM7BAwKASMJ4WXLn80BOwSMoxB2iR977dkhYLwLYZfY81JzdggYOSHsEjtOtS51CKXok60xL1lg1ISwS/Qo1vaqQyhFnmpNWy5ZlCLHZS1bf0MoZZymGt75UaeUflTeKDdRShe3atYz7KWUdm7Xqvc+hFKuMX1N7EQpVbprM3qnTilnhmoiMXVCKf8M10JqLotShGogObn4yVLEcpee7f00KbN0zhrT7+JBgqKSo+Z6yJOlqOWmvUD1RCmqOVmsGD5JinouVku4T5BikoPlmnpUKaaDFOtNDtGkmMfrseskihSXOL22AaHfq7jF5r0vC1GKa0wIG+WQpLjHgrJzEUEKxBcDaSupZ0FguhRtb69HYaB+xxA3W1sWCG5QIf3vu6VIhdJ66zbskBv9cQSNwkHfmEZ4PkSygPCzBFEe2JEoZIgpm0hPUI0UNMykZrRH2noKG2qGGXWUVaN1BBZy/SWikERJTNzVyWmafgHRqzxWkCtkGAAAAABJRU5ErkJggg==" />
+                                    </svg>
+    
+                                    <svg class="buttons" aria-label="Comment" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path clip-rule="evenodd"
+                                            d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Share Post" class="_8-yf5 " color="#ffffff"
+                                        fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+                                        </path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Save" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
+                                        </path>
+                                    </svg>
+                                </div>
+    
+                                <div class="d-flex mt-2 ms-2 ps-2">
+                                    <img class="border me-2" id="subtitle-profile"
+                                        src="../static/imgs/about-me/indiedevday.jpeg" alt="">
+                                    <p>Liked by <span id="weight-600">uwaterloo</span> and <span id="weight-600">371
+                                            others</span></p>
+                                </div>
+                                <div class="lh-1" style="margin: 0%  2%;">
+                                    <div class="d-flex flex-wrap">
+                                        <h6 class="ms-1">sarptandoven</h6>
+                                        <p style="text-align: justify;  flex-basis: 100%; line-height: 1.5;" class="ms-1">
+                                            I go to the University of Waterloo, and I study Management Engineering! My major is unique, in that it covers a range of engineering fields including industrial engineering, data science, and software engineering.
+                                        </p>
+                                    </div>
+    
+                                    <div>
+                                        <p id="show-comments" class="ms-1">View all 32 comments</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between pe-4">
+                                        <div class="d-flex">
+                                            <h6 class="ms-1">uwaterloo</h6>
+                                            <p class="ms-1">You've made a huge impact through your design teams!</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p id="time-info" class="ms-1">SEPTEMBER 4TH 2024</p>
+                                    </div>
+                                </div>
+                        </article>
+                    </section>
+                    <section id="post-side" class="border-bottom p-0 mt-4 bg-black">
+                        <article class="bg-black">
+                            <div id="post-top-bar" class="p-2 d-flex justify-content-between align-items-center">
+                                <div style="display: flex;">
+                                    <div>
+                                        <img id="post-profile-story" src="../static/imgs/about-me/profile.jpeg" alt="">
+                                    </div>
+                                    <div style="display: flex; flex-direction: column;">
+                                        <label class="d-inline ps-2">
+                                            <span id="post-nick">sarptandoven</span>
+                                        </label>
+                                        <label class="d-inline ps-2">
+                                            <span id="show-comments">My first hackathon!</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg id="dots" aria-label="More options" class="_8-yf5 " color="white" fill="white"
+                                        height="24" role="img" viewBox="0 0 24 24" width="24">
+                                        <circle cx="12" cy="12" r="1.5"></circle>
+                                        <circle cx="6.5" cy="12" r="1.5"></circle>
+                                        <circle cx="17.5" cy="12" r="1.5"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                <img class="post" src="../static/imgs/about-me/travel_2.webp" id="post_7" alt="">
+                                <div class="next-photo" id="next_7"></div>
+                                <div class="prev-photo" id="prev_7"></div>
+    
+                            </div>
+                            <div id="bottom-bar">
+                                <div class="mt-3"><svg class="buttons" id="like_7" aria-label="Like" color="#ffffff"
+                                        fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+                                        </path>
+                                    </svg>
+    
+                                    <svg class="buttons" id="liked_7" aria-label="Like" color="#ffffff" fill="#ffffff"
+                                        width="24" height="24" role="img" viewBox="0 0 48 48"
+                                        style="display: none; margin-left: 1rem;">
+                                        <image id="Capa_1" y="0" width="48" height="48"
+                                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABYCAYAAAADWlKCAAACj0lEQVR4nO2dW3KDMAxFgel+uoXuf1N0ho4pCbYxth5X5J6v/gQknYgY29B5/f6ZFFkbDz1rBtFIa6wJlZi/hI93N6nS5ywE9caa+7xYvBJCRhO7Oqa0HOh4R4RoJFY7z6iYEPEugye1ZORyGCbeux3ikVju/K3fvmjx3uoQ7+SOtMQSLd6NViFIySVqMUWLd6dFCGJyiVxs0eJ94UoIcnKJtfA3KtUYa0IiJJfwGkn1Uoy1JCRSclHJ1rj3PoQokRPC7rDjVGt2CBjvQtgd9rzUnB0CxlEIu8OPvfbsEDCSEHaHP5sDdggYFALGwssVFCs7BAwKAYNCwKAQMCgEDAoBg0LAoBAwKAQMCgGDQsCgEDAoBAwKAYNCwKAQMBaQR5LJHzM7BAwKASMJ4WXLn80BOwSMoxB2iR977dkhYLwLYZfY81JzdggYOSHsEjtOtS51CKXok60xL1lg1ISwS/Qo1vaqQyhFnmpNWy5ZlCLHZS1bf0MoZZymGt75UaeUflTeKDdRShe3atYz7KWUdm7Xqvc+hFKuMX1N7EQpVbprM3qnTilnhmoiMXVCKf8M10JqLotShGogObn4yVLEcpee7f00KbN0zhrT7+JBgqKSo+Z6yJOlqOWmvUD1RCmqOVmsGD5JinouVku4T5BikoPlmnpUKaaDFOtNDtGkmMfrseskihSXOL22AaHfq7jF5r0vC1GKa0wIG+WQpLjHgrJzEUEKxBcDaSupZ0FguhRtb69HYaB+xxA3W1sWCG5QIf3vu6VIhdJ66zbskBv9cQSNwkHfmEZ4PkSygPCzBFEe2JEoZIgpm0hPUI0UNMykZrRH2noKG2qGGXWUVaN1BBZy/SWikERJTNzVyWmafgHRqzxWkCtkGAAAAABJRU5ErkJggg==" />
+                                    </svg>
+    
+                                    <svg class="buttons" aria-label="Comment" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path clip-rule="evenodd"
+                                            d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Share Post" class="_8-yf5 " color="#ffffff"
+                                        fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+                                        </path>
+                                    </svg>
+                                    <svg class="buttons" aria-label="Save" class="_8-yf5 " color="#ffffff" fill="#ffffff"
+                                        height="24" role="img" viewBox="0 0 48 48" width="24">
+                                        <path
+                                            d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
+                                        </path>
+                                    </svg>
+                                </div>
+    
+                                <div class="d-flex mt-2 ms-2 ps-2">
+                                    <img class="border me-2" id="subtitle-profile"
+                                        src="../static/imgs/about-me/friend2.webp" alt="">
+                                    <p>Liked by <span id="weight-600">friend</span> and <span id="weight-600">123
+                                            others</span></p>
+                                </div>
+                                <div class="lh-1" style="margin: 0%  2%;">
+                                    <div class="d-flex flex-wrap">
+                                        <h6 class="ms-1">sarptandoven</h6>
+                                        <p style="text-align: justify;  flex-basis: 100%; line-height: 1.5;" class="ms-1">
+    
+                                            When I got involved with the technology/engineering industry, I joined my first hackathon called StarterHacks. 
+                                        <br><br>
+                                            We developed a project called Serenity which was is a service that helps seniors address everyday concerns about their health. It provides essential support without any financial burden on seniors and can diagnose a wide range of common health issues.
+                                        </p>
+                                    </div>
+    
+                                    <div>
+                                        <p id="show-comments" class="ms-1">View all 88 comments</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between pe-4">
+                                        <div class="d-flex">
+                                            <h6 class="ms-1">friend</h6>
+                                            <p class="ms-1">this is a great engineering opportunity!</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p id="time-info" class="ms-1">JULY 19TH 2023</p>
+                                    </div>
+                                </div>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="credits" class="credits" style="display: none;">
+            <div class="title-bar" id="titleBar">
+                <div class="title">Credits</div>
+                <div class="window-controls">
+                    <div class="window-button restore"></div>
+                    <div class="window-button minimize"></div>
+                    <div class="window-button close"></div>
+                </div>
+            </div>
+            <div id="credits-content" style="font-family: Consolas, monospace; font-size: 13px;" class="content">
+                Sarp OS [Version 13.08.2006]<br>
+                (c) Sarp OS. All rights reserved.<br><br>
+                C:\Users\sarptandoven\Documents\Credits&gt; ls<br><br>
+                <div id="credits_credits" style="display: block;">
+                    <pre style="font-family: Consolas, monospace; font-size: 13px; overflow: hidden; display: flex;">
+                        <a id="credits_button" class="credits-selected">Credits</a>
+                        <a id="inspiration_button" class="credits-section">Inspiration</a>
+                        <a id="resources_button" class="credits-section" >Resources</a>
+                        <a id="special_thanks_button" class="credits-section">Special Thanks</a>
+                    </pre>
+                    C:\Users\sarptandoven\Documents\Credits&gt; cat Credits<br><br>
+                    <div style="text-align: center; font-size: 13px; font-family: Consolas, monospace;">
+                        Engineering<br><br><span style="margin-left:150px; float: left;">Design and programming
+                        </span><span style="margin-right:150px;float: right;">Sarp Doven
+                        </span><br><br>Modeling & Texturing<br><br>
+                        <span style="margin-left:150px; float: left;">Texturing, Lighting & Composition</span><span
+                            style="margin-right:150px;float: right;">Sarp Doven
+                        </span><br><span style="margin-left:150px; float: left;">Modeling</span><span
+                            style="margin-right:150px;float: right;">Sarp Doven & External Resources
+    
+                        </span><br><br>Software & Tools<br><br>
+                        ThreeJS <br>Blender <br>Photoshop <br>
+                    </div>
+                </div>
+                <div id="credits_inspiration" style="display: none;">
+                    <pre style="font-family: Consolas, monospace; font-size: 13px; overflow: hidden; display: flex;">
+                        <a id="credits_button" class="credits-section">Credits</a>
+                        <a id="inspiration_button" class="credits-selected">Inspiration</a>
+                        <a id="resources_button" class="credits-section" >Resources</a>
+                        <a id="special_thanks_button" class="credits-section">Special Thanks</a>
+                    </pre>
+                    C:\Users\sarptandoven\Documents\Credits&gt; cat Inspiration<br><br>
+                    <div style="text-align: center; font-size: 13px; font-family: Consolas, monospace;">
+                        Inspiration websites<br><br><span style="margin-left:150px; float: left;">Bruno Simon - Three JS
+                            Journey</span><span style="margin-right:150px;float: right;"><a
+                                href="https://threejs-journey.com/" target="_blank" style="color: white;">
+                                https://threejs-journey.com/</a>
+                        </span><br>
+                        <span style="margin-left:150px; float: left;">Bruno Simon - My Room in 3D</span><span
+                            style="margin-right:150px;float: right;"><a href="https://my-room-in-3d.vercel.app/"
+                                target="_blank" style="color: white;">
+                                https://my-room-in-3d.vercel.app/</a>
+                        </span><br><span style="margin-left:150px; float: left;">Jesse Zhou - Jesse's Ramen</span><span
+                            style="margin-right:150px;float: right;"><a href="https://my-room-in-3d.vercel.app/"
+                                target="_blank" style="color: white;">
+                                https://jesse-zhou.com/</a>
+                        </span><br><span style="margin-left:150px; float: left;">Steven Lambert's Basic Games</span><span
+                            style="margin-right:150px;float: right;"><a href="https://gist.github.com/straker"
+                                target="_blank" style="color: white;">
+                                https://gist.github.com/straker</a>
+                        </span>
+                        </span><br><span style="margin-left:150px; float: left;">Acerola's Youtube channel</span><span
+                            style="margin-right:150px;float: right;"><a href="https://www.youtube.com/@Acerola_t"
+                                target="_blank" style="color: white;">
+                                https://www.youtube.com/@Acerola_t</a>
+                        </span><br>
+                        <br>
+                    </div>
+                </div>
+                <div id="credits_resources" style="display: none;">
+                    <pre style="font-family: Consolas, monospace; font-size: 13px; overflow: hidden; display: flex;">
+                        <a id="credits_button" class="credits-section">Credits</a>
+                        <a id="inspiration_button" class="credits-section">Inspiration</a>
+                        <a id="resources_button" class="credits-selected" >Resources</a>
+                        <a id="special_thanks_button" class="credits-section">Special Thanks</a>
+                    </pre>
+                    C:\Users\sarptandoven\Documents\Credits&gt; cat Resources<br><br>
+                    <div style="text-align: center; font-size: 13px; font-family: Consolas, monospace;">
+                        External Models<br>
+                        <br>"Low Poly Chess Set" (<a href="https://skfb.ly/6y8FI" target="_blank"
+                            style="color: white;">https://skfb.ly/6y8FI</a>) by hanoldaa is licensed under
+                        Creative Commons
+                        Attribution
+                        (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"
+                            style="color: white;">http://creativecommons.org/licenses/by/4.0/</a>).
+                        <br>
+                        "Dumbbells" (<a href="https://skfb.ly/oxRx6" target="_blank"
+                            style="color: white;">https://skfb.ly/oxRx6</a>) by Kyn is licensed under Creative Commons
+                        Attribution
+                        (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"
+                            style="color: white;">http://creativecommons.org/licenses/by/4.0/</a>).
+                        <br>
+                        "Yoga Mat" (<a href="https://skfb.ly/6QYTC" target="_blank"
+                            style="color: white;">https://skfb.ly/6QYTC</a>) by Jeremy E. Grayson is licensed under Creative
+                        Commons
+                        Attribution
+                        (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"
+                            style="color: white;">http://creativecommons.org/licenses/by/4.0/</a>).
+                        <br>"ps5 controller" (<a href="https://skfb.ly/6RGLZ" target="_blank"
+                            style="color: white;">https://skfb.ly/6RGLZ</a>) by Fred Drabble is licensed under Creative
+                        Commons
+                        Attribution
+                        (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"
+                            style="color: white;">http://creativecommons.org/licenses/by/4.0/</a>).
+                        <br>"BearBrick" (<a href="https://skfb.ly/6VSBG" target="_blank"
+                            style="color: white;">https://skfb.ly/6VSBG</a>) by O-Sushi is licensed under Creative Commons
+                        Attribution
+                        (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"
+                            style="color: white;">http://creativecommons.org/licenses/by/4.0/</a>).
+                        <br>"pacman arcade machine" (<a href="https://skfb.ly/owTDr" target="_blank"
+                            style="color: white;">https://skfb.ly/owTDr</a>) by Musti575uz is licensed under Creative
+                        Commons
+                        Attribution
+                        (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"
+                            style="color: white;">http://creativecommons.org/licenses/by/4.0/</a>).
+                        <br>"Simple Headphone" (<a href="https://skfb.ly/6UULI" target="_blank"
+                            style="color: white;">https://skfb.ly/6UULI</a>) by D31T7 is licensed under Creative Commons
+                        Attribution
+                        (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"
+                            style="color: white;">http://creativecommons.org/licenses/by/4.0/</a>).
+                        <br>"Potted Plant" (<a href="https://skfb.ly/oKLQA" target="_blank"
+                            style="color: white;">https://skfb.ly/oKLQA</a>) by caridorka is licensed under Creative Commons
+                        Attribution
+                        (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"
+                            style="color: white;">http://creativecommons.org/licenses/by/4.0/</a>).
+                        <br>"Monstera Deliciosa Potted Mid-Century plant" (<a href="https://skfb.ly/oAEoM" target="_blank"
+                            style="color: white;">https://skfb.ly/oAEoM</a>) by Giora is licensed under
+                        Creative Commons
+                        Attribution (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"
+                            style="color: white;">http://creativecommons.org/licenses/by/4.0/</a>).
+                        <br>"PS5" (<a href="https://skfb.ly/6T7JX" target="_blank"
+                            style="color: white;">https://skfb.ly/6T7JX</a>) by rtql8d is licensed under Creative Commons
+                        Attribution
+                        (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"
+                            style="color: white;">http://creativecommons.org/licenses/by/4.0/</a>).
+                        <br><br>
+                        <div style="text-align: center; font-size: 13px; font-family: Consolas, monospace;">
+                            Sounds & music<br><br>
+                            <span style="margin-left:150px; float: left;">Sound Effects</span><span
+                                style="margin-right:150px;float: right;"><a href="https://www.zapsplat.com/" target="_blank"
+                                    style="color: white;">ZapSplat</a> and <a href="https://kenney.nl/" target="_blank"
+                                    style="color: white;">Kenney</a>
+                            </span><br>
+                            <span style="margin-left:150px; float: left;">Music</span><span
+                                style="margin-right:150px;float: right;"><a
+                                    href="https://freetouse.com/music/massobeats/floral" target="_blank"
+                                    style="color: white;">
+                                    massobeats - floral</a>
+                            </span>
+                            <br>
+                        </div>
+                    </div>
+    
+                </div>
+                <div id="credits_special_thanks" style="display: none;">
+                    <pre style="font-family: Consolas, monospace; font-size: 13px; overflow: hidden; display: flex;">
+                        <a id="credits_button" class="credits-section">Credits</a>
+                        <a id="inspiration_button" class="credits-section">Inspiration</a>
+                        <a id="resources_button" class="credits-section">Resources</a>
+                        <a id="special_thanks_button" class="credits-selected">Special Thanks</a>
+                    </pre>
+                    C:\Users\sarptandoven\Documents\Credits&gt; cat Special Thanks<br><br>
+                    <div style="text-align: center; font-size: 13px; font-family: Consolas, monospace;">
+                        Special Thanks<br><br>
+                        To everyone who has offered guidance and support throughout this project, especially to my friends.
+                    </div>
+                </div>
+                <a id="prev_button" style="margin-left:20px;float: left; display: none;" class="credits-selected">Prev</a>
+                <a id="next_button" style="margin-right:20px;float: right;padding-left: 10px; padding-right: 10px;"
+                    class="credits-selected">Next</a>
+                <br>
+                <br> C:\Users\sarptandoven\Documents\Credits&gt;<span style="font-weight: bold;" class="underscore">_</span>
+    
+            </div>
+        </div>
+        <div id="contact" class="contact" style="display: none;">
+            <div class="title-bar" id="titleBar" style="background-color: #0078d7;">
+                <div class="title">Contact</div>
+                <div class="window-controls">
+                    <div class="window-button-blue restore"></div>
+                    <div class="window-button-blue minimize"></div>
+                    <div class="window-button close"></div>
+                </div>
+            </div>
+            <div id="contact-content" style="font-family: Consolas, monospace; font-size: 13px;" class="content-light">
+                <p style="text-align: center;margin: 10px 10px; font-weight: bold; font-size:60px; color:black;">Get in
+                    touch with me!
+                </p>
+                <p style="text-align: center;margin: 10px 10px; font-weight: bold; color:black;">Do you have
+                    any questions or comments? I'm here to listen! Fill out the form below or email me directly at <a
+                        href="mailto:sarptandoven@gmail.com">sarptandoven@gmail.com</a>.</p>
+    
+                <form id="form-contact">
+                    <label for="nombre">Name</label>
+                    <input type="text" id="form-name" name="nombre" required placeholder="Your name">
+    
+                    <label for="email">Your mail</label>
+                    <input type="email" id="form-mail" name="email" required placeholder="example@mail.com">
+    
+                    <label for="mensaje">Message</label>
+                    <textarea id="form-message" name="mensaje" rows="4" required placeholder="Your message"></textarea>
+                    <div style="display: flex; align-items: center;">
+                        <input type="submit" value="Send Message">
+                        <p id="message_contact_success" style="margin: 10px 10px; font-weight: bold; display: none;">Your
+                            message has been sent
+                            succesfully!</p>
+                        <p id="message_contact_error" style="margin: 10px 10px; font-weight: bold; display: none;">Error.
+                            Try to contact me
+                            through my personal
+                            e-mail: sarptandoven@gmail.com</p>
+    
+                    </div>
+    
+                </form>
+                <p style="text-align: center;margin: 10px 10px; ">All messages are sent directly to my personal account:
+    
+                    <a href="mailto:sarptandoven@gmail.com">sarptandoven@gmail.com</a>
+                </p><br>
+    
+                <div style="text-align: center;">
+                    <a href="https://www.linkedin.com/in/sarp-tan-doven/" target="_blank" style="color: #0078d7;">
+                        <ion-icon style="margin:0 10px" size="large" name="logo-linkedin"></ion-icon>
+                    </a>
+                    <a href="https://github.com/sarptandoven" target="_blank" style="color: #0078d7;">
+                        <ion-icon style="margin:0 10px" size="large" name="logo-github"></ion-icon>
+                    </a>
+                    </a>
+                    <a href="https://x.com/sarptandoven" target="_blank" style="color: #0078d7;">
+                        <ion-icon style="margin:0 10px" size="large" name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="mailto:sarptandoven@gmail.com" target="_blank" style="color: #0078d7;">
+                        <ion-icon style="margin:0 10px" size="large" name="mail-outline"></ion-icon>
+                    </a>
+                </div>
+    
+            </div>
+        </div>
+        <div id="experience" class="experience" style="display: none;">
+            <div class="title-bar" id="titleBar" style="background-color: black;">
+                <div class="title">Experience</div>
+                <div class="window-controls">
+                    <div class="window-button restore"></div>
+                    <div class="window-button minimize"></div>
+                    <div class="window-button close"></div>
+                </div>
+            </div>
+            <div id="experience-content" class="content" style="background-color: #141414; padding-top: 0; padding-left: 0; padding-right: 0;">
+                <header>
+                    <div style="display: inline-flex;">
+                        <p id="experience-title">EXPERIENCE</p>
+                        <nav class="links">
+                            <ul>
+                                <li><a>Home</a></li>
+                                <li><a>Experience</a></li>
+                                <li><a>My jobs</a></li>
+                                <li><a>About</a></li>
+                                <li><a>Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <img class="header-image" src="../static/imgs/experience/smiley.webp" alt="Smiley">
+                </header>
+                <div class="company-selection">
+                    <div class="company-logo">
+                        <img id="work11" src="../static/imgs/experience/work11.webp" alt="WORK">
+                    </div>
+                    <div class="company-logo">
+                        <img id="experience11" src="../static/imgs/experience/experience11.webp" alt="EXPERIENCE">
+                    </div>
+                    <div class="company-logo">
+                        <img id="projects11" src="../static/imgs/experience/projects11.webp" alt="PROJECTS">
+                    </div>
+                    <div class="company-logo">
+                        <img src="../static/imgs/experience/tba.webp" alt="TBA">
+                    </div>
+                    <div class="company-logo">
+                        <img src="../static/imgs/experience/tba.webp" alt="TBA">
+                    </div>
+                    <div class="company-logo">
+                        <img src="../static/imgs/experience/tba.webp" alt="TBA">
+                    </div>
+                    <div class="company-logo">
+                        <img src="../static/imgs/experience/tba.webp" alt="TBA">
+                    </div>
+                </div>
+                <div class="timeline" id="experience_timeline" style="display: none;">
+                    <div class="timeline-item">
+                        <p style="font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">CxC Executive</p>
+                        <p style="font-size: 20px; color: #ffffff; font-family: 'BebasNeue', sans-serif;">University of Waterloo Data Science</p>
+                        <p style="font-size: 12px; color: #b8b8b8;">September 2024 - PRESENT</p>
+                        <p style="font-size: 14px; text-align: justify; width:90%">Working as a CxC Executive here has been a whirlwind. I’m helping organize a massive datathon, which has taught me event logistics and sponsor relations in ways I never expected. The thrill of bringing 300+ people together to innovate with data is both nerve-racking and exhilarating.
+                            <br><br></p>
+                    </div>
+                    <div class="timeline-item">
+                        <h2 style="color:#de1310; font-family: 'BebasNeue', sans-serif;">Chapter President</h2>
+                        <p style="font-size: 20px; color: #ffffff; font-family: 'BebasNeue', sans-serif;">Future Business Leaders of America, Inc.</p>
+                        <p style="font-size: 12px; color: #b8b8b8;">September 2023 - June 2024</p>
+                        <p style="font-size: 14px; text-align: justify; width:90%">
+                            As Chapter President, I organized business development seminars, led our team to the Canadian National Leadership Conference, and secured a financial grant. Achieving a top 10 ranking was fantastic, but the real reward was seeing members grow in confidence and skill.<br><br>
+                            Balancing leadership responsibilities with my own learning taught me the art of delegation and motivation. Gaining recognition like the Largest Chapter Expansion medal felt incredible - but it was even more satisfying knowing we built a community where everyone felt empowered to strive for excellence.
+                    </div>
+                    <div class="timeline-item">
+                        <p style="font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">Chapter Director</p>
+                        <p style="font-size: 20px; color: #ffffff; font-family: 'BebasNeue', sans-serif;">DECA</p>
+                        <p style="font-size: 12px; color: #b8b8b8;">September 2022 - April 2024</p>
+                        <p style="font-size: 14px; text-align: justify; width:90%">
+                            Overseeing 150 members in our DECA chapter was both challenging and hugely fulfilling. From running workshops on public speaking to teaching classes for case study analysis, I learned how much personal growth can happen when people are given the right tools and a supportive environment.<br><br>
+                            Seeing members step onto the national stage and perform confidently was a highlight. Each success story reaffirmed my belief in mentorship: when you train others to harness their own strengths, you end up learning just as much in return.
+                        </p>
+                    </div>
+                    <div class="timeline-item">
+                        <p style="font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">President</p>
+                        <p style="font-size: 20px; color: #ffffff; font-family: 'BebasNeue', sans-serif;">Junior Achievement Canada</p>
+                        <p style="font-size: 12px; color: #b8b8b8;">September 2023 - June 2024</p>
+                        <p style="font-size: 14px; text-align: justify; width:90%">
+                            I led multiple workshops and organized hands-on business simulations that prepared members for local and national competitions. Collaborating with industry mentors, I introduced case studies, pitch training, and real-world marketing scenarios, ensuring our team tackled each challenge with confidence. In the end, the leadership was a success, we achieved 6th in the JA Canada national SMC, from 2300 competitors! <br><br>
+                            A standout experience was launching a mini-venture project at school, where I guided members through budgeting, product development, and sales. Setting milestones, negotiating sponsorships, and delegating tasks tested my leadership and collaboration skills. Finally, watching students progress from initial ideas to polished pitches really showed me the power of practical learning backed by real goals and targets.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline" id="work_timeline" style="display: none;">
+                    <div class="timeline-item">
+                        <p style="font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">Software Engineer</p>
+                        <p style="font-size: 20px; color: #ffffff; font-family: 'BebasNeue', sans-serif;">Waterloo Reality Labs</p>
+                        <p style="font-size: 12px; color: #b8b8b8;">September 2024 - PRESENT</p>
+                        <p style="font-size: 14px; text-align: justify; width:90%">Working at Waterloo Reality Labs has been an exciting leap into the world of VR. My primary focus is on creating gesture recognition scripts in C# using Meta’s SDK, which has helped me see how vital precise user interactions are in immersive technology. Every tiny movement can make or break the user’s sense of presence, so it's been a rewarding challenge to refine every frame of the experience.<br><br>It’s made me appreciate how real-time feedback loops are crucial for a truly engaging environment. Balancing performance constraints with quality user experience remains a day-to-day puzzle, but one I’m passionate about solving.</p>
+                        <br>
+                    </div>
+                    <div class="timeline-item">
+                        <h2 style="color:#de1310; font-family: 'BebasNeue', sans-serif;">Founding Engineer</h2>
+                        <p style="font-size: 20px; color: #ffffff; font-family: 'BebasNeue', sans-serif;">The Amici Network</p>
+                        <p style="font-size: 12px; color: #b8b8b8;">July 2024 - PRESENT</p>
+                        <p style="font-size: 14px; text-align: justify; width:90%">
+                            Being the first engineer at The Amici Network has given me a crash course in full-stack development and entrepreneurial spirit. I built out the iOS app’s frontend in React Native, designing user pages for onboarding and live ride creation. It’s been thrilling to see how UI can directly influence user engagement, especially with a real-time chatting feature in place.
+                            <br><br>
+                            Perhaps the most enlightening piece was implementing a dynamic pricing algorithm using random forest regressors. By learning to blend data science with immediate user needs, I gained a deeper appreciation for how the right pricing model can make or break a platform’s success.
+                        </p>
+                        <br>
+                    </div>
+                    <div class="timeline-item">
+                        <p style="font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">Software Developer</p>
+                        <p style="font-size: 20px; color: #ffffff; font-family: 'BebasNeue', sans-serif;">Evolits</p>
+                        <p style="font-size: 12px; color: #b8b8b8;">June 2024 - August 2024</p>
+                        <p style="font-size: 14px; text-align: justify; width:90%">
+                            At Evolits, I was tasked with creating JavaScript UI components for a project called Mount Gemma using React.js and context APIs. Integrating these into Godot’s engine taught me to juggle multiple frameworks - a challenge, but it strengthened my adaptability as a developer.<br><br>
+                            Another huge role I was involved with was quality assurance testing. Running over a hundred integration tests with Mocha and Chai also led me to see how quality assurance underpins every aspect of a project. Rigorous testing not only gave me confidence in the final product but saved countless hours of debugging in the long run.
+                        </p>
+                    </div>
+                    <div class="timeline-item">
+                        <p style="font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">Coding and Engineering Design Instructor</p>
+                        <p style="font-size: 20px; color: #ffffff; font-family: 'BebasNeue', sans-serif;">Code Ninjas Milton</p>
+                        <p style="font-size: 12px; color: #b8b8b8;">May 2022 - May 2024 (24 months)</p>
+                        <p style="font-size: 14px; text-align: justify; width:90%">
+                            Teaching coding to younger learners was as much an education for me as it was for them. Breaking down complex Java concepts or explaining the fundamentals of 3D printing taught me to streamline my thinking and communicate more clearly. The facility’s Roblox development class was an added bonus - which taught me to use Lua to teach game design and machine learning was both playful and enlightening.<br><br>
+                            I also led code review sessions, showing students how to identify bugs and optimize performance in Unity and JavaScript. Watching them grow and grasp advanced concepts gave me a profound sense of fulfillment and reminded me how invigorating it is to mentor others.
+                        </p>
+                    </div>
+                    <div class="timeline-item">
+                        <p style="font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">Data Analyst</p>
+                        <p style="font-size: 20px; color: #ffffff; font-family: 'BebasNeue', sans-serif;">Infinite Options LLC</p>
+                        <p style="font-size: 12px; color: #b8b8b8;">June 2022 - May 2023</p>
+                        <p style="font-size: 14px; text-align: justify; width:90%">
+                            Collaborating on an AI-driven stock market prediction bot exposed me to real-world financial data and the complexity of modeling market behavior. Every insight and every percentage error shaved off felt like a mini-victory. All in all, I think my time at Infinite Options was about effectively translating data into actionable results, and helping a large community of young investors.<br><br>
+                            I also prepared analytical reports for over 1,500 members. This experience made me realize how vital clear and concise communication is—no matter how impressive the analytics, if the audience can’t grasp it quickly, it loses its impact.
+                        </p>
+                    </div>
+                    <div class="timeline-item">
+                        <p style="font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">Escape Room Game Master</p>
+                        <p style="font-size: 20px; color: #ffffff; font-family: 'BebasNeue', sans-serif;">Mission Possible Escape Rooms</p>
+                        <p style="font-size: 12px; color: #b8b8b8;">November 2021 - May 2022</p>
+                        <p style="font-size: 14px; text-align: justify; width:90%">
+                            Working as a Game Master was a bit of a plot twist in my journey. Whether I was fixing props or guiding players through the puzzles, it taught me how to troubleshoot issues on the fly and maintain a cool head in hectic situations.<br><br>
+                            In addition to this, I was responsible for managing payments, liability waivers, and vaccination certificates, which also happened to really improve my attention to detail. Overall, it was a fun lesson in customer satisfaction - small details like a broken lock or missed clue can derail the entire experience, so thoroughness and a friendly demeanor went a long way.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline" id="projects_timeline" style="display: none;">
+                    <div class="timeline-item">
+                        <p style="font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">Traffix</p>
+                        <p style="font-size: 20px; color: #ffffff; font-family: 'BebasNeue', sans-serif;">Hack The North 2024</p>
+                        <p style="font-size: 14px; text-align: justify; width:90%">I built a neural network traffic system powered by Python, TensorFlow, and OpenCV, with the goal of adjusting traffic signal timings in real time. I found that real-time constraints demand not just accuracy but speed, so optimizing to keep latency under 1000 ms was a major focus. Working with pre-trained models like ResNet-50 and EfficientNet taught me the importance of transfer learning - why reinvent the wheel when you can fine-tune existing architectures?<br><br>Check out the project <a
+                            style="color: white;" href="https://devpost.com/software/traffix-sva85n"
+                            target="_blank">here!</a>.
+                            <br><br>You can also check out our website below.<br><br> https://thetraffixperiment.info/
+                        </p>
+                        <br>
+                    </div>
+                    <div class="timeline-item">
+                        <h2 style="color:#de1310; font-family: 'BebasNeue', sans-serif;">The Amici Network</h2>
+                        <p style="font-size: 14px; text-align: justify; width:90%">
+                            This carpooling app started as a collaboration with McMaster University and grew into a comprehensive platform for university commuters. As the lead for frontend development, I developed on React Native and with JavaScript to design an intuitive user interface, prioritizing usability and responsiveness for key features like ride creation and real-time messaging. Integrating Redux for state management and optimizing component rendering enhanced the platform's performance, ensuring a seamless experience for users with time-sensitive needs.
+                            <br><br>
+                            Building a backend with PostgreSQL and implementing 20+ RESTful endpoints helped me solidify my full-stack foundations. By tracking metrics and user feedback, I got a hands-on lesson in iterative development - nothing replaces actual user data when refining features.
+                            <br><br>
+                            Live demo video coming soon!
+
+                        </p>
+                        <br>
+                    </div>
+                    <div class="timeline-item">
+                        <p style="font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">EduTailor</p>
+                        <p style="font-size: 14px; text-align: justify; width:90%">
+                            EduTailor began as a Chrome extension concept: turning search histories into learning insights using GPT-4o-mini. Linking Python, Flask, and Node.js for real-time summarization was a technical feat, but the bigger lesson was about user experience - embedding NLP solutions into everyday browsing must be seamless to be truly valuable.<br><br>
+                            The project showed me how even small disruptions in user workflow can feel overwhelming. Ensuring low-latency query handling and a clean interface made all the difference in the user experience. 
+                            <br><br>
+                            <a
+                            style="color: white;" href="https://devpost.com/software/edutailor"
+                            target="_blank">Check it out here!</a>.
+                        </p>
+                        <br>
+                    </div>
+                    <div class="timeline-item">
+                        <p style="font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">Those Who Remain</p>
+                        <p style="font-size: 14px; text-align: justify; width:90%">
+                            Roblox "Those Who Remain" Game Development Competition - ranked 4th place out of 65 competitors. Developed a Roblox map for Those Who Remain, with 1000 active weekly players.
+                            <br><br>
+                            <a
+                            style="color: white;" href="https://github.com/sarptandoven/Bunker-Apocalypse-Map"
+                            target="_blank">Check it out here!</a>.
+                            <br><br>
+                        </div>
+                        <div class="timeline-item">
+                            <p style="font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">Serenity</p>
+                            <p style="font-size: 14px; text-align: justify; width:90%">
+                                Serenity is an AI-powered web service designed to enhance the daily lives of seniors. Integrating a Python Flask backend with a custom GPT-4 model required careful consideration of user demands - seniors often need a more intuitive interface and simpler instructions.
+                                <br><br>
+                                It was enlightening to see how thorough testing and user feedback loops could refine the chatbot experience. Handling 100+ API requests per session underlined the importance of scalability, and ensuring the AI’s responses remained gentle and empathetic validated the impact of user-focused design.
+                                <br><br>
+                                <a
+                                style="color: white;" href="https://devpost.com/software/serenity-8vcwnu"
+                                target="_blank">Check it out here!</a>.
+                       
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+          document.getElementById('work11').addEventListener('click', () => {
+              document.getElementById('work_timeline').style.display = 'block';
+              document.getElementById('experience_timeline').style.display = 'none';
+              document.getElementById('projects_timeline').style.display = 'none';
+          });
+          document.getElementById('experience11').addEventListener('click', () => {
+              document.getElementById('experience_timeline').style.display = 'block';
+              document.getElementById('work_timeline').style.display = 'none';
+              document.getElementById('projects_timeline').style.display = 'none';
+          });
+          document.getElementById('projects11').addEventListener('click', () => {
+              document.getElementById('projects_timeline').style.display = 'block';
+              document.getElementById('work_timeline').style.display = 'none';
+              document.getElementById('experience_timeline').style.display = 'none';
+          });
+        </script>
+      </div>
+      
+      <style>
+      @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&display=swap");
+      
+      #ultimate-adv-loading-screen {
+        position: fixed;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        font-family: "JetBrains Mono", monospace;
+        z-index: 999999;
+        overflow: hidden;
+      }
+      
+      #bg-swirl {
+        position: absolute;
+        width: 100%; 
+        height: 100%;
+        background: radial-gradient(circle at center, #111 0%, #000 80%);
+        animation: swirl 13s ease-in-out infinite alternate;
+
+
+        opacity: 0.7;
+      }
+      
+      @keyframes swirl {
+        0%   { transform: scale(1) rotate(0deg); }
+        100% { transform: scale(1.1) rotate(15deg); }
+      }
+      
+      #scanlines {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.03) 0px,
+          transparent 2px,
+          transparent 4px
+        );
+        pointer-events: none;
+      }
+      
+      #spinner {
+        position: absolute;
+        top: 15%;
+        width: 120px;
+        height: 120px;
+        border: 10px solid rgba(255,255,255,0.2);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      
+      @keyframes spin {
+        0%   { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      #typed-line1,
+      #typed-line2,
+      #typed-line3 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5em;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid #fff;
+        width: 0;
+        opacity: 0;
+        text-align: center;
+      }
+      
+      #typed-line1 {
+        animation: typingLine1 3s steps(40, end) 0s forwards;
+      }
+      #typed-line2 {
+        animation: typingLine2 3s steps(45, end) 3s forwards;
+      }
+      #typed-line3 {
+        animation: typingLine3 3s steps(45, end) 7s forwards;
+      }
+      
+      @keyframes typingLine1 {
+        0%   { width: 0;   opacity: 1; border-right-color: #fff; }
+        20%  { width: 26ch; opacity: 1; border-right-color: #fff; }
+        80%  { width: 26ch; opacity: 1; border-right-color: #fff; }
+        99%  { width: 0;   opacity: 1; border-right-color: #fff; }
+        100% { width: 0;   opacity: 1; border-right-color: transparent; }
+      }
+      
+      @keyframes typingLine2 {
+        0%   { width: 0;   opacity: 1; border-right-color: #fff; }
+        20%  { width: 30ch; opacity: 1; border-right-color: #fff; }
+        80%  { width: 30ch; opacity: 1; border-right-color: #fff; }
+        99%  { width: 0;   opacity: 1; border-right-color: #fff; }
+        100% { width: 0;   opacity: 1; border-right-color: transparent; }
+      }
+      
+      @keyframes typingLine3 {
+        0%   { width: 0;   opacity: 1; border-right-color: #fff; }
+        20%  { width: 33ch; opacity: 1; border-right-color: #fff; }
+        80%  { width: 33ch; opacity: 1; border-right-color: #fff; }
+        99%  { width: 0;   opacity: 1; border-right-color: #fff; }
+        100% { width: 0;   opacity: 1; border-right-color: transparent; }
+      }
+      
+      #welcome-text {
+        position: absolute;
+        bottom: 15%;
+        font-size: 2em;
+        letter-spacing: 3px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s, transform 1s;
+      }
+      
+      .fade-spinner {
+        animation: fadeSpinner 0.5s forwards;
+      }
+      
+      @keyframes fadeSpinner {
+        to { opacity: 0; visibility: hidden; }
+      }
+      
+      .fade-out-loading {
+        animation: fadeOutLoading 0.4s forwards;
+      }
+      
+      @keyframes fadeOutLoading {
+        to { opacity: 0; visibility: hidden; }
+      }
+      </style>
+      
+      <script>
+      window.addEventListener("DOMContentLoaded",function(){
+        var screen=document.getElementById("ultimate-adv-loading-screen");
+        var spinner=document.getElementById("spinner");
+        var welcome=document.getElementById("welcome-text");
+        var main=document.getElementById("main-page-content");
+      
+        setTimeout(function(){
+          spinner.classList.add("fade-spinner");
+        },12000);
+      
+        setTimeout(function(){
+          welcome.style.opacity=1;
+          welcome.style.transform="translateY(0)";
+        },13000);
+      
+        setTimeout(function(){
+          screen.classList.add("fade-out-loading");
+          setTimeout(function(){
+            screen.style.display="none";
+            main.style.display="block";
+          },1000);
+        },15000);
+      });
+      </script>
+    
+    
+    
+</body>
+
+</html>
